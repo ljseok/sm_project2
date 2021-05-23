@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MypageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mypage_toolbar"
+        android:layout_width="414dp"
+        android:layout_height="55dp"
+        android:background="@color/main_orange"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/go_to_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="   마이 페이지"
+        app:titleTextColor="#FFFFFF"
+        tools:menu="@menu/actionbar_actions" />
+
+    <Button
+        android:id="@+id/go_to_setting"
+        android:layout_width="413dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/go_to_setting_btn"
+        android:drawableLeft="@drawable/image_icon"
+        android:drawableRight="@drawable/follow_icon"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/userid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mypage_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/go_to_cost_setting"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/go_to_setting_btn"
+        android:drawableRight="@drawable/follow_icon"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="설정 비용 변경하기"
+        app:layout_constraintEnd_toEndOf="@+id/go_to_setting"
+        app:layout_constraintStart_toStartOf="@+id/go_to_setting"
+        app:layout_constraintTop_toBottomOf="@+id/go_to_setting" />
+
+    <Button
+        android:id="@+id/go_to_likepage2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/go_to_setting_btn"
+        android:drawableRight="@drawable/follow_icon"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="찜한 가게 보기"
+        app:layout_constraintEnd_toEndOf="@+id/go_to_cost_setting"
+        app:layout_constraintStart_toStartOf="@+id/go_to_cost_setting"
+        app:layout_constraintTop_toBottomOf="@+id/go_to_cost_setting" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
