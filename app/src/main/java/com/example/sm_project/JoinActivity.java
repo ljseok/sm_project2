@@ -33,7 +33,7 @@ import java.util.HashMap;
 import java.util.regex.Pattern;
 
 public class JoinActivity extends AppCompatActivity {
-    private AdView mAdview;
+    private AdView mAdview; // AdView 변수설정
     private static final String TAG = "JoinActivity";
     // 이메일과 비밀번호
     EditText mEmailText, mPasswordText, mPasswordcheckText, mNameText;
@@ -51,19 +51,19 @@ public class JoinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+        MobileAds.initialize(this, new OnInitializationCompleteListener() { // 광고초기화 함수
             @Override
             public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
 
             }
         });
-
+        // Adview 설정
         mAdview = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdview.loadAd(adRequest);
         AdView adView = new AdView(this);
-        adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId(" \n"+"ca-app-pub-3940256099942544/6300978111");
+        adView.setAdSize(AdSize.BANNER); // 광고사이즈를 배너사이즈로 설정
+        adView.setAdUnitId(" \n"+"ca-app-pub-3940256099942544/6300978111"); // 테스트를 하기위한 테스트 아이디 설정
 
         //파이어베이스 접근 설정
         // user = firebaseAuth.getCurrentUser();
